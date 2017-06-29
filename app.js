@@ -1,7 +1,7 @@
 $('document').ready(function(){
 var $box = $('.box');
 var color = 'white';
-var allcolors = 'white green blue'
+var allcolors = 'white green blue yellow red'
 
 $box.on('click', function(){
   $(this).addClass('white');
@@ -43,6 +43,15 @@ $('.box').on('dblclick', function() {
 $('#reset').on('click', function() {
   $('.box').removeClass(color)
 })
+
+
+$('.box').mousedown( 'mousedown', function(){
+  $('.box').on( 'mouseover', function(){
+    $(this).toggleClass( color )
+  })
+})
+
+
 
 
 });
